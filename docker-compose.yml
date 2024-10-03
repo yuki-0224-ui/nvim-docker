@@ -1,0 +1,10 @@
+services:
+  nvim-dev:
+    build: .
+    platform: linux/amd64
+    volumes:
+      - $HOME/workspace:/workspace
+      - $HOME/dotfiles:/root/.config
+    working_dir: /workspace
+    tty: true
+    stdin_open: true
